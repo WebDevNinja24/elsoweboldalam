@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu" onmouseover="document.body.style.color='red'" onmouseout="document.body.style.color='black'">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>sikerült!Ez az első weboldalam.</h1>
+    <p>html
+<img src="kep.jfif" alt="Az én képem" style="width: 300px; border-radius: 10px;">A VS kód szuperül működik.</p>
+  <button onclick="document.body.style.backgroundColor = 'gold'" style="cursor:pointer; padding:10px 20px; background: #ffcc00; border:none; border-radius:5px; font-weight:bold;">
+      Legyen Arany az oldal!
+    <span id="mode-toggle" style="font-size: 20px; cursor: pointer;" onclick="toggleMode()">🌙</span>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const toggle = document.getElementById('mode-toggle');
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+                toggle.innerHTML = '🌞'; // Sun emoji for light mode
+            } else {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+                toggle.innerHTML = '🌙'; // Moon emoji for dark mode
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    </button>
+</body>
+</html>  
