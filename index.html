@@ -17,63 +17,38 @@
     <p>
 <img src="kep.jfif" alt="Az én képem" style="width: 300px; border-radius: 10px;">A VS kód szuperül működik.</p>
 
-<section id="szolgaltatasok" style="padding: 50px 20px; text-align: center;">
-    <h2 style="color: #61dafb; margin-bottom: 30px;">Miben tudok segíteni?</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-        
-        <!-- 1. Kártya -->
-        <div style="background: #2c313c; padding: 25px; border-radius: 15px; width: 250px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); border: 1px solid #444;">
-            <div style="font-size: 40px;">💻</div>
-            <h3 style="color: white;">Weboldal készítés</h3>
-            <p style="color: #ccc; font-size: 14px;">Modern, gyors és AI-val optimalizált honlapok építése kisvállalkozóknak.</p>
-        </div>
+<section id="kapcsolat" style="padding: 60px 20px; background: #1a1d23; text-align: center; font-family: sans-serif;">
+    <div style="max-width: 600px; margin: 0 auto; background: #242933; padding: 40px; border-radius: 20px; border: 1px solid #333; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
+        <h2 style="color: #61dafb; margin-bottom: 10px; font-size: 28px;">Vedd fel velem a kapcsolatot!</h2>
+        <p style="color: #aaa; margin-bottom: 30px;">Kérdésed van vagy projektet indítanál? Írj nekem bátran!</p>
 
-        <!-- 2. Kártya -->
-        <div style="background: #2c313c; padding: 25px; border-radius: 15px; width: 250px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); border: 1px solid #444;">
-            <div style="font-size: 40px;">📱</div>
-            <h3 style="color: white;">Mobilbarát design</h3>
-            <p style="color: #ccc; font-size: 14px;">Weboldalaid minden telefonon és tableten tökéletesen fognak mutatni.</p>
-        </div>
+        <form action="https://formspree.io/f/mreleqzz" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <!-- Visszairányítás a köszönő oldalra -->
+            <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
+            
+            <!-- Adatmezők -->
+            <div style="text-align: left;">
+                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">Neved</label>
+                <input type="text" name="name" placeholder="Példa Béla" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; box-sizing: border-box;">
+            </div>
 
-        <!-- 3. Kártya -->
-        <div style="background: #2c313c; padding: 25px; border-radius: 15px; width: 250px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); border: 1px solid #444;">
-            <div style="font-size: 40px;">⚡</div>
-            <h3 style="color: white;">Gyorsítás</h3>
-            <p style="color: #ccc; font-size: 14px;">Lassú az oldalad? Kijavítom a kódhibákat és villámgyorssá teszem a betöltést.</p>
-        </div>
+            <div style="text-align: left;">
+                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">E-mail címed</label>
+                <input type="email" name="email" placeholder="pelda@email.com" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; box-sizing: border-box;">
+            </div>
 
+            <div style="text-align: left;">
+                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">Üzeneted</label>
+                <textarea name="message" placeholder="Írd le miben segíthetek..." rows="5" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; resize: vertical; box-sizing: border-box;"></textarea>
+            </div>
+
+            <button type="submit" style="padding: 16px; background: #61dafb; color: #1a1d23; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; transition: transform 0.2s, background 0.3s; margin-top: 10px;">
+                Üzenet küldése 🚀
+            </button>
+        </form>
     </div>
 </section>
 
-<section id="kapcsolat" style="padding: 50px 20px; background: #1a1d23; text-align: center;">
-    <h2 style="color: #61dafb;">Vedd fel velem a kapcsolatot!</h2>
-    <p style="color: white; margin-bottom: 30px;">Kérdésed van? Írj nekem bátran!</p>
-
-    <form style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-        <input type="text" placeholder="Neved" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white;">
-        
-        <input type="email" placeholder="E-mail címed" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white;">
-        
-        <textarea placeholder="Üzeneted..." rows="5" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white; resize: vertical;"></textarea>
-        
-        <button type="submit" style="padding: 15px; background: #61dafb; color: #282c34; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;">
-            Üzenet küldése
-        </button>
-    </form>action="https://formspree.io/f/mreleqzz" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-       <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
-
-        <input type="text" name="name" placeholder="Neved" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white;">
-        
-        <input type="email" name="email" placeholder="E-mail címed" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white;">
-        
-        <textarea name="message" placeholder="Üzeneted..." rows="5" required style="padding: 12px; border-radius: 5px; border: 1px solid #444; background: #2c313c; color: white; resize: vertical;"></textarea>
-        
-        <button type="submit" style="padding: 15px; background: #61dafb; color: #282c34; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;">
-            Üzenet küldése
-        </button>
-    </form>
-</section>
 
 <footer style="background: #111; color: #888; padding: 40px 20px; text-align: center; border-top: 1px solid #333; margin-top: 50px;">
     <div style="margin-bottom: 20px;">
