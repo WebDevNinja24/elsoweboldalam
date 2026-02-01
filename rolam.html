@@ -5,105 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rólam - Az én portfólióm</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-color: #1e1e1e;
-            color: white;
-            line-height: 1.6;
-        }
-        nav {
-            background: #333;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-        }
-        nav a.home { color: #61dafb; font-weight: bold; }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-        }
-        h1 { color: #61dafb; border-bottom: 2px solid #61dafb; padding-bottom: 10px; }
-        h2 { color: #61dafb; margin-top: 30px; }
-        ul { list-style-type: none; padding: 0; }
-        ul li { margin-bottom: 10px; }
+        body { margin:0; padding:0; font-family:sans-serif; background:#1e1e1e; color:white; }
+        nav { background:#333; padding:15px; display:flex; justify-content:space-around; position:sticky; top:0; z-index:1000; }
+        nav a { text-decoration:none; color:white; font-weight:bold; }
+        nav a.home { color:#61dafb; }
+        .container { max-width:800px; margin:50px auto; padding:20px; }
+        h1, h2 { color:#61dafb; }
+        ul { list-style:none; padding:0; }
+        ul li { margin-bottom:10px; }
         .quote { margin-top:40px; border-left:4px solid #61dafb; padding-left:20px; font-style:italic; color:#ccc; }
         section.contact { padding:40px 20px; background:#1e1e1e; border-radius:15px; margin:40px auto; max-width:800px; border:1px solid #333; }
         section.contact input, section.contact textarea, section.contact button {
-            width:100%;
-            padding:12px;
-            border-radius:5px;
-            border:1px solid #444;
-            background:#2c313c;
-            color:white;
-            margin-top:10px;
-            box-sizing:border-box;
+            width:100%; padding:12px; border-radius:5px; border:1px solid #444; background:#2c313c; color:white; margin-top:10px; box-sizing:border-box;
         }
         section.contact button { background:#61dafb; color:#282c34; font-weight:bold; cursor:pointer; }
-        footer {
-            background:#111;
-            color:#888;
-            padding:30px 20px;
-            text-align:center;
-            border-top:1px solid #333;
-        }
+        footer { background:#111; color:#888; padding:30px 20px; text-align:center; border-top:1px solid #333; }
         footer a { color:#61dafb; text-decoration:none; margin:0 10px; font-size:13px; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="home">Főoldal</a>
-        <a href="rolam.html">Rólam</a>
-        <a href="index.html#kapcsolat">Kapcsolat</a>
-    </nav>
 
-    <div class="container">
-        <h1>Bemutatkozás</h1>
-        <p>Szia! Én egy lelkes webfejlesztő vagyok, aki imádja a modern technológiákat és a kreatív megoldásokat. Az első weboldalamat most készítettem el, és nagyon izgatott vagyok, hogy megoszthatom veletek a munkáimat.</p>
-        <p>A célom, hogy segítsek kisvállalkozásoknak és egyéni vállalkozóknak professzionális online jelenlétet építeni.</p>
-        <p>Amikor éppen nem kódolok vagy dizájnolok, szeretek új technológiákat tanulni, blogolni, és részt venni tech közösségekben.</p>
+<nav>
+    <a href="index.html" class="home">Főoldal</a>
+    <a href="rolam.html">Rólam</a>
+    <a href="index.html#kapcsolat">Kapcsolat</a>
+</nav>
 
-        <h2>Mivel foglalkozom?</h2>
-        <ul>
-            <li>🚀 Gyors és reszponzív webhelyek</li>
-            <li>🤖 AI-támogatott fejlesztés</li>
-            <li>🎨 Modern, letisztult design</li>
-        </ul>
+<div class="container">
+    <h1>Bemutatkozás</h1>
+    <p>Szia! Én egy lelkes webfejlesztő vagyok, aki imádja a modern technológiákat és a kreatív megoldásokat. Az első weboldalamat most készítettem el, és nagyon izgatott vagyok, hogy megoszthatom veletek a munkáimat.</p>
 
-        <h2>Miért válassz engem?</h2>
-        <p>Folyamatosan tanulok a Visual Studio Code környezetében, és célom, hogy a kisvállalkozások digitális térben is sikeresek legyenek.</p>
+    <h2>Mivel foglalkozom?</h2>
+    <ul>
+        <li>🚀 Gyors és reszponzív webhelyek</li>
+        <li>🤖 AI-támogatott fejlesztés</li>
+        <li>🎨 Modern, letisztult design</li>
+    </ul>
 
-        <div class="quote">
-            "A kódolás ma már nem csak a karakterek gépelése, hanem a problémák kreatív megoldása."
-        </div>
+    <h2>Miért válassz engem?</h2>
+    <p>Folyamatosan tanulok, és célom, hogy a kisvállalkozások digitális térben is sikeresek legyenek.</p>
 
-        <section class="contact">
-            <h2 style="text-align:center;">Kérdésed van? Írj nekem!</h2>
-            <form action="https://formspree.io/f/mreleqzz" method="POST">
-                <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
-                <input type="text" name="name" placeholder="Neved" required>
-                <input type="email" name="email" placeholder="E-mail címed" required>
-                <textarea name="message" placeholder="Üzeneted" rows="4" required></textarea>
-                <button type="submit">Üzenet küldése</button>
-            </form>
-        </section>
+    <div class="quote">
+        "A kódolás ma már nem csak a karakterek gépelése, hanem a problémák kreatív megoldása."
     </div>
 
-    <footer>
-        <p>&copy; 2026 Minden jog fenntartva | Készítette: A Te Neved</p>
-        <div>
-            <a href="index.html">Főoldal</a>
-            <a href="index.html#kapcsolat">Kapcsolat</a>
-        </div>
-    </footer>
+    <section class="contact">
+        <h2 style="text-align:center;">Kérdésed van? Írj nekem!</h2>
+        <form id="contact-form" action="https://formspree.io/f/mreleqzz" method="POST">
+            <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
+            <input type="text" name="name" placeholder="Neved" required>
+            <input type="email" name="email" placeholder="E-mail címed" required>
+            <textarea name="message" placeholder="Üzeneted" rows="4" required></textarea>
+            <button type="submit">Üzenet küldése</button>
+        </form>
+    </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        fetch(form.action, {
+            method:'POST',
+            body:new FormData(form),
+            headers:{ 'Accept':'application/json' }
+        })
+        .then(response => {
+            if(response.ok){
+                window.location.href='https://webdevninja24.github.io/elsoweboldalam/koszonom.html';
+            } else {
+                alert('Hiba történt a küldés során!');
+            }
+        })
+        .catch(()=>alert('Hiba történt a küldés során!'));
+    });
+});
+</script>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Minden jog fenntartva | Készítette: A Te Neved</p>
+    <div>
+        <a href="index.html">Főoldal</a>
+        <a href="index.html#kapcsolat">Kapcsolat</a>
+    </div>
+</footer>
+
 </body>
 </html>
