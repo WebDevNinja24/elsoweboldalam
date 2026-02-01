@@ -4,71 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rólam - Az én portfólióm</title>
-      <style>
+    <style>
         body {
-            background-color: #282c34;
-            color: white;
-            line-height: 1.8;
-            font-size: 16px;
-            margin: 10px 0;
-            padding: 20px;
-            background-color: #1e1e1e;
-            font-family: sans-serif;
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            line-height: 1.6;
         }
+        nav {
+            background: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+        nav a.home { color: #61dafb; font-weight: bold; }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            line-height: 1.6;
         }
-        h1 { color: #61dafb; }
+        h1 { color: #61dafb; border-bottom: 2px solid #61dafb; padding-bottom: 10px; }
+        h2 { color: #61dafb; margin-top: 30px; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { margin-bottom: 10px; }
+        .quote { margin-top:40px; border-left:4px solid #61dafb; padding-left:20px; font-style:italic; color:#ccc; }
+        section.contact { padding:40px 20px; background:#1e1e1e; border-radius:15px; margin:40px auto; max-width:800px; border:1px solid #333; }
+        section.contact input, section.contact textarea, section.contact button {
+            width:100%;
+            padding:12px;
+            border-radius:5px;
+            border:1px solid #444;
+            background:#2c313c;
+            color:white;
+            margin-top:10px;
+            box-sizing:border-box;
+        }
+        section.contact button { background:#61dafb; color:#282c34; font-weight:bold; cursor:pointer; }
+        footer {
+            background:#111;
+            color:#888;
+            padding:30px 20px;
+            text-align:center;
+            border-top:1px solid #333;
+        }
+        footer a { color:#61dafb; text-decoration:none; margin:0 10px; font-size:13px; }
     </style>
 </head>
 <body>
-    <nav style="background: #333; padding: 15px; display: flex; justify-content: space-around; position: sticky; top: 0; z-index: 1000;">
-    <a href="index.html" style="color: #61dafb; text-decoration: none; font-weight: bold;">Főoldal</a>
-    <a href="rolam.html" style="color: white; text-decoration: none;">Rólam</a>
-    <a href="#kapcsolat" style="color: white; text-decoration: none;">Kapcsolat</a>
-</nav>
-    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8;">
-         <h1 style="color: #61dafb; border-bottom: 2px solid #61dafb; padding-bottom: 10px;">Bemutatkozás</h1>
+    <nav>
+        <a href="index.html" class="home">Főoldal</a>
+        <a href="rolam.html">Rólam</a>
+        <a href="index.html#kapcsolat">Kapcsolat</a>
+    </nav>
+
+    <div class="container">
+        <h1>Bemutatkozás</h1>
         <p>Szia! Én egy lelkes webfejlesztő vagyok, aki imádja a modern technológiákat és a kreatív megoldásokat. Az első weboldalamat most készítettem el, és nagyon izgatott vagyok, hogy megoszthatom veletek a munkáimat.</p>
-        <p>A célom, hogy segítsek kisvállalkozásoknak és egyéni vállalkozóknak abban, hogy professzionális online jelenlétet építsenek ki. Hiszem, hogy egy jól megtervezett weboldal nem csak információforrás, hanem egyben a márkaépítés és az ügyfélszerzés egyik legfontosabb eszköze is.</p>
-        <p>Amikor éppen nem kódolok vagy dizájnolok, szeretek új technológiákat tanulni, blogot írni a webfejlesztésről, és részt venni különböző tech közösségekben.</p>
-        <p>Köszönöm, hogy ellátogattál az oldalamra! Ha szeretnél többet megtudni rólam vagy a szolgáltatásaimról, ne habozz kapcsolatba lépni velem.</p>
-         <h2 style="margin-top: 30px;">Mivel foglalkozom?</h2>
-    <ul style="list-style-type: none; padding: 0;">
-        <li style="margin-bottom: 10px;">🚀 **Gyors és reszponzív webhelyek:** Olyan oldalakat építek, amik mobilon és asztali gépen is tökéletesen futnak.</li>
-        <li style="margin-bottom: 10px;">🤖 **AI-támogatott fejlesztés:** A legújabb eszközöket használom, hogy a kód tiszta és hibamentes legyen.</li>
-        <li style="margin-bottom: 10px;">🎨 **Modern Design:** Letisztult, sötét tónusú és elegáns felületeket tervezek.</li>
-    </ul>
+        <p>A célom, hogy segítsek kisvállalkozásoknak és egyéni vállalkozóknak professzionális online jelenlétet építeni.</p>
+        <p>Amikor éppen nem kódolok vagy dizájnolok, szeretek új technológiákat tanulni, blogolni, és részt venni tech közösségekben.</p>
 
-    <h2 style="margin-top: 30px;">Miért válassz engem?</h2>
-    <p>Folyamatosan tanulok és kísérletezem a legújabb technológiákkal a **Visual Studio Code** környezetében. Célom, hogy segítsek a kisvállalkozásoknak és egyéni vállalkozóknak megmutatni magukat a digitális térben egy olyan honlappal, ami valóban látogatókat hoz.</p>
-    
-    <div style="margin-top: 40px; border-left: 4px solid #61dafb; padding-left: 20px; font-style: italic; color: #ccc;">
-        "A kódolás ma már nem csak a karakterek gépelése, hanem a problémák kreatív megoldása."
+        <h2>Mivel foglalkozom?</h2>
+        <ul>
+            <li>🚀 Gyors és reszponzív webhelyek</li>
+            <li>🤖 AI-támogatott fejlesztés</li>
+            <li>🎨 Modern, letisztult design</li>
+        </ul>
+
+        <h2>Miért válassz engem?</h2>
+        <p>Folyamatosan tanulok a Visual Studio Code környezetében, és célom, hogy a kisvállalkozások digitális térben is sikeresek legyenek.</p>
+
+        <div class="quote">
+            "A kódolás ma már nem csak a karakterek gépelése, hanem a problémák kreatív megoldása."
+        </div>
+
+        <section class="contact">
+            <h2 style="text-align:center;">Kérdésed van? Írj nekem!</h2>
+            <form action="https://formspree.io/f/mreleqzz" method="POST">
+                <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
+                <input type="text" name="name" placeholder="Neved" required>
+                <input type="email" name="email" placeholder="E-mail címed" required>
+                <textarea name="message" placeholder="Üzeneted" rows="4" required></textarea>
+                <button type="submit">Üzenet küldése</button>
+            </form>
+        </section>
     </div>
-<section style="padding: 40px 20px; background: #1e1e1e; border-radius: 15px; margin: 40px auto; max-width: 800px; border: 1px solid #333;">
-    <h2 style="color: #61dafb; text-align: center;">Kérdésed van? Írj nekem!</h2>
-   <form action="https://formspree.io/f/mreleqzz" method="POST">
-  <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Küldés</button>
-</form>
-</section>
 
-<footer style="background: #111; color: #888; padding: 30px 20px; text-align: center; border-top: 1px solid #333; margin-top: 50px; font-family: sans-serif;">
-    <p style="margin: 0; font-size: 14px;">&copy; 2026 Minden jog fenntartva | Készítette: [A Te Neved]</p>
-    <div style="margin-top: 10px;">
-        <a href="index.html" style="color: #61dafb; text-decoration: none; margin: 0 10px; font-size: 13px;">Főoldal</a>
-        <a href="index.html#kapcsolat" style="color: #61dafb; text-decoration: none; margin: 0 10px; font-size: 13px;">Kapcsolat</a>
-    </div>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Minden jog fenntartva | Készítette: A Te Neved</p>
+        <div>
+            <a href="index.html">Főoldal</a>
+            <a href="index.html#kapcsolat">Kapcsolat</a>
+        </div>
+    </footer>
 </body>
 </html>

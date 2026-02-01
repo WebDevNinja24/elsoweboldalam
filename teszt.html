@@ -22,6 +22,19 @@
 
   <button type="submit">Üzenet küldése</button>
 </form>
-
+<script>
+document.querySelector('form').addEventListener('submit', function(e){
+  e.preventDefault(); // megakadályozza a normál POST redirectet
+  const form = e.target;
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    // Ha sikeres, átirányítás
+    window.location.href = 'https://webdevninja24.github.io/elsoweboldalam/koszonom.html';
+  }).catch(error => alert('Hiba történt!'));
+});
+</script>
 </body>
 </html>

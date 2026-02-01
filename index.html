@@ -1,103 +1,107 @@
 <!DOCTYPE html>
-<html lang="hu" onmouseover="document.body.style.color='red'" onmouseout="document.body.style.color='black'">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <nav style="background: #333; padding: 15px; display: flex; justify-content: space-around; position: sticky; top: 0; z-index: 1000;">
-    <a href="index.html" style="color: #61dafb; text-decoration: none; font-weight: bold;">Főoldal</a>
-    <a href="rolam.html" style="color: white; text-decoration: none;">Rólam</a>
-    <a href="#kapcsolat" style="color: white; text-decoration: none;">Kapcsolat</a>
-</nav>
-
-    <h1>sikerült!Ez az első weboldalam.</h1>
-    <p>
-<img src="kep.jfif" alt="Az én képem" style="width: 300px; border-radius: 10px;">A VS kód szuperül működik.</p>
-
-<section id="kapcsolat" style="padding: 60px 20px; background: #1a1d23; text-align: center; font-family: sans-serif;">
-    <div style="max-width: 600px; margin: 0 auto; background: #242933; padding: 40px; border-radius: 20px; border: 1px solid #333; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
-        <h2 style="color: #61dafb; margin-bottom: 10px; font-size: 28px;">Vedd fel velem a kapcsolatot!</h2>
-        <p style="color: #aaa; margin-bottom: 30px;">Kérdésed van vagy projektet indítanál? Írj nekem bátran!</p>
-
-        <form action="https://formspree.io/f/mreleqzz" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-            <!-- Visszairányítás a köszönő oldalra -->
-            <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
-            
-            <!-- Adatmezők -->
-            <div style="text-align: left;">
-                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">Neved</label>
-                <input type="text" name="name" placeholder="Példa Béla" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; box-sizing: border-box;">
-            </div>
-
-            <div style="text-align: left;">
-                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">E-mail címed</label>
-                <input type="email" name="email" placeholder="pelda@email.com" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; box-sizing: border-box;">
-            </div>
-
-            <div style="text-align: left;">
-                <label style="color: #61dafb; display: block; margin-bottom: 5px; font-size: 14px;">Üzeneted</label>
-                <textarea name="message" placeholder="Írd le miben segíthetek..." rows="5" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #444; background: #1a1d23; color: white; resize: vertical; box-sizing: border-box;"></textarea>
-            </div>
-
-            <button type="submit" style="padding: 16px; background: #61dafb; color: #1a1d23; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; transition: transform 0.2s, background 0.3s; margin-top: 10px;">
-                Üzenet küldése 🚀
-            </button>
-        </form>
-    </div>
-</section>
-
-
-<footer style="background: #111; color: #888; padding: 40px 20px; text-align: center; border-top: 1px solid #333; margin-top: 50px;">
-    <div style="margin-bottom: 20px;">
-        <h3 style="color: #61dafb; margin-bottom: 10px;">Az én Portfólióm</h3>
-        <p style="font-size: 14px;">Profi weboldalak készítése AI támogatással.</p>
-    </div>
-    
-    <div style="margin-bottom: 20px;">
-        <a href="#" style="color: #ccc; margin: 0 10px; text-decoration: none;">Facebook</a>
-        <a href="#" style="color: #ccc; margin: 0 10px; text-decoration: none;">Instagram</a>
-        <a href="#" style="color: #ccc; margin: 0 10px; text-decoration: none;">LinkedIn</a>
-    </div>
-    
-    <hr style="border: 0; border-top: 1px solid #222; max-width: 200px; margin: 20px auto;">
-    
-    <p style="font-size: 12px;">&copy; 2026 Minden jog fenntartva. Készítette: A Te Neved</p>
-</footer>
-
-  <button onclick="document.body.style.backgroundColor = 'gold'" style="cursor:pointer; padding:10px 20px; background: #ffcc00; border:none; border-radius:5px; font-weight:bold;">
-      Legyen Arany az oldal!
-    <span id="mode-toggle" style="font-size: 20px; cursor: pointer;" onclick="toggleMode()">🌙</span>
-
-    <script>
-        function toggleMode() {
-            const body = document.body;
-            const toggle = document.getElementById('mode-toggle');
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
-                toggle.innerHTML = '🌞'; // Sun emoji for light mode
-            } else {
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
-                toggle.innerHTML = '🌙'; // Moon emoji for dark mode
-            }
-        }
-    </script>
-
+    <title>Az én portfólióm</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #1e1e1e;
+            color: white;
             transition: background-color 0.5s, color 0.5s;
         }
-        .dark-mode {
-            background-color: black;
-            color: white;
+        nav {
+            background: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav a.home { color: #61dafb; }
+        h1 { color: #61dafb; }
+        section { padding: 60px 20px; }
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            background: #242933;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #1a1d23;
+            color: white;
+            box-sizing: border-box;
+        }
+        button {
+            background: #61dafb;
+            color: #1a1d23;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            background: #111;
+            color: #888;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+        footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
     </style>
-    </button>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="home">Főoldal</a>
+        <a href="rolam.html">Rólam</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+
+    <h1>Sikerült! Ez az első weboldalam.</h1>
+    <p>
+        <img src="kep.jfif" alt="Az én képem" style="width: 300px; border-radius: 10px;">
+        A VS Code szuperül működik.
+    </p>
+
+    <section id="kapcsolat">
+        <div class="contact-box">
+            <h2 style="color:#61dafb;">Vedd fel velem a kapcsolatot!</h2>
+            <p style="color:#aaa;">Kérdésed van vagy projektet indítanál? Írj nekem bátran!</p>
+            <form action="https://formspree.io/f/mreleqzz" method="POST">
+                <input type="hidden" name="_next" value="https://webdevninja24.github.io/elsoweboldalam/koszonom.html">
+                <input type="text" name="name" placeholder="Neved" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Üzeneted" rows="5" required></textarea>
+                <button type="submit">Üzenet küldése 🚀</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <h3 style="color:#61dafb;">Az én Portfólióm</h3>
+        <p>Profi weboldalak készítése AI támogatással.</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <hr style="border-top:1px solid #222; max-width:200px; margin:20px auto;">
+        <p>&copy; 2026 Minden jog fenntartva. Készítette: A Te Neved</p>
+    </footer>
 </body>
-</html>  
+</html>
